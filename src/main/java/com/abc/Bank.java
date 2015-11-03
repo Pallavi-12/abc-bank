@@ -36,7 +36,7 @@ public class Bank {
 
     public String getFirstCustomer() {
         try {
-            customers = null;
+           if( customers !=null)                    //customer= null will throw null function error as the value of customer is set to null. will never be able to get the name
             return customers.get(0).getName();
         } catch (Exception e){
             e.printStackTrace();
