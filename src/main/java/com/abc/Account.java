@@ -10,7 +10,7 @@ public class Account {
     public static final int MAXI_SAVINGS = 2;
 
     private final int accountType;
-    public List<Transaction> transactions;
+    private List<Transaction> transactions;// public was made private as the access should not be given to everyone
 
     public Account(int accountType) {
         this.accountType = accountType;
@@ -59,7 +59,7 @@ public void withdraw(double amount) {
        return checkIfTransactionsExist(true);
     }
 
-    private double checkIfTransactionsExist(boolean checkAll) {
+    private double checkIfTransactionsExist(boolean checkAll) {  // checkall is not used 
         double amount = 0.0;
         for (Transaction t: transactions)
             amount += t.amount;
