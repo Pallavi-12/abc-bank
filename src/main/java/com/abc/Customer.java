@@ -14,7 +14,7 @@ public class Customer {
         this.accounts = new ArrayList<Account>();
     }
 
-    public String getName() {
+    public String getName() {      // here this fuction does not have body
         return name;
     }
 
